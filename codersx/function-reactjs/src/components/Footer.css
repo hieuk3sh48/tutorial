@@ -1,0 +1,30 @@
+.Footer {
+  background: #fff;
+  width: 40%;
+  margin: 2em;
+}
+.Footer .title {
+  background: #f5f6f7;
+  color: #4b4f56;
+}
+.title h1 {
+  color: #4b4f56;
+}
+.Footer .content {
+  padding: 1em;
+}
+.Footer .content .item {
+  justify-content: start;
+  border-bottom: 1px solid #e9ebee;
+}
+.item input {
+  margin-left: 1em;
+  border: none;
+}
+.Footer .content button {
+  background: #f5f6f7;
+  border-radius: 20px;
+  color: #4b4f56;
+  margin: 0.5em;
+  margin-left: 0;
+}

@@ -1,0 +1,7 @@
+block content
+  h1 View book
+  a(href='/books') Books
+  ul
+    if book
+      each value,key in book
+        li=key+': '+value

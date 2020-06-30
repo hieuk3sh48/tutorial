@@ -1,0 +1,23 @@
+extends ../../layouts/common.pug
+
+block content
+  h1 Product
+  a(href='/books') books
+  if book
+    .card(style='width: 18rem;')
+      img.card-img-top(src=book.avatar, alt='...')
+      .card-body
+        h5.card-title(style='text-transform: capitalize')=book.name
+        p.card-text(style='text-transform: capitalize')
+          | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        a.btn.btn-primary(href='#') Add to cart
+        span &nbsp
+        span &nbsp
+        span &nbsp
+        button(onclick='addclick()') +
+        span #{count}
+        button#sub -
+  script.
+    var addclick=function(){
+    console.log('ssss');
+    };

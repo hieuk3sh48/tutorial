@@ -1,0 +1,30 @@
+extends ../layouts/common.pug
+block content
+  include ../layouts/header.pug
+  h1 Transaction
+  a(href='/transaction/create') create transaction
+  form(action='/transaction/search',method='GET')
+    input(type='text',name='q')
+    button Search user
+
+  table.table
+      thead
+        tr
+          th(scope='col') #
+          th(scope='col') User
+          th(scope='col') Book
+          th(scope='col') Status
+      tbody
+      if transaction
+        each tran,index in transaction
+          tr
+            th(scope='row')=index+1
+            td=tran.userName
+            td=tran.bookName
+            td
+              a(href='/transaction/'+tran.id) View
+              span &nbsp
+              a(href='/transaction/'+tran.id+'/delete') Delete
+  
+  
+  

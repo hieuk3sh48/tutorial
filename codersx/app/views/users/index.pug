@@ -1,0 +1,32 @@
+extends ../layouts/common.pug
+
+block content
+  include ../layouts/header.pug
+  h1 Users
+  a(href='/users/create') create user
+  form(action='/users/search',method='GET')
+    input(type='text',name='q')
+    button Search user
+
+  table.table
+      thead
+        tr
+          th(scope='col') #
+          th(scope='col') Avatar
+          th(scope='col') Name
+          th(scope='col') Status
+      tbody
+      if users
+        each user,index in users
+          tr
+            th(scope='row')=index+1
+            td
+              img(src=user.avatar,width='50px')
+            td=user.name
+            td
+              a(href='/users/'+user.id) View
+              span &nbsp
+              a(href='/users/'+user.id+'/delete') Delete
+  
+  
+  

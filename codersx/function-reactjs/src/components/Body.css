@@ -1,0 +1,45 @@
+.Body {
+  background: #fff;
+  width: 30%;
+  margin-left: 2em;
+  border-radius: 5px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.title h1 {
+  font-size: 20px;
+  color: #999999;
+  margin: 0;
+}
+.title button {
+  background: transparent;
+  border: none;
+}
+.content {
+  padding: 0 1em;
+}
+.content .item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.content .text {
+  flex: 1;
+  margin-left: 2em;
+}
+.text p {
+  margin: 0;
+}
+.text .recomment {
+  color: #c4c4c4;
+}

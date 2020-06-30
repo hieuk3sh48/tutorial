@@ -1,0 +1,36 @@
+extends ../layouts/common.pug
+
+block content
+  include ../layouts/header.pug
+  h1 Books
+  a(href='/books/create') create book
+  form(action='/books/search',method='GET')
+    input(type='text',name='q')
+    button Search book
+
+  table.table
+      thead
+        tr
+          th(scope='col') #
+          th(score='col') Avatar
+          th(scope='col') Name
+          th(scope='col') Status
+          th(scope='col') Thue sach
+      tbody
+      if books
+        each book,index in books
+          tr
+            th(scope='row')=index+1
+            td
+              img(src=book.avatar,width='50px')
+            td=book.name
+            td
+              a(href='/books/'+book.id) View
+              span &nbsp
+              a(href='/books/'+book.id+'/delete') Delete
+            td
+              a(href='/books/product/'+book.id)
+                button Rent
+  
+  
+  

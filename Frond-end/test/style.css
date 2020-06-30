@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./public/img/thepostpande.jpg);
+    font-size: sans-serif;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.form-box{
+    margin: 12% auto;
+    padding: 40px 0;
+    width: 500px ;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
