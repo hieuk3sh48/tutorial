@@ -12,11 +12,12 @@ app.use(express.json());
 
 /* connect mongoose */
 const uri=process.env.ATLAS_URI;
-mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true})
+mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true})
 const connection=mongoose.connection;
 connection.once('open',()=>{
     console.log("MongoDB database connection established successfully");
 })
+mongoose.Promise=global.Promise;
 
 /* Router */
 const userRouter=require('./router/user.router.js');
