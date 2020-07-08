@@ -9,8 +9,7 @@ import {
     Redirect,
 
 } from "react-router-dom";
-
-import NumberContext from './../../context_api/NumberContext';
+import {CartContext} from './../../context_api/Cart';
 import Style from './style.js';
 
 class Header extends Component{
@@ -19,14 +18,18 @@ class Header extends Component{
         return(
             <Style>
                     <div className='Header'>
-                        <NumberContext.Consumer></NumberContext.Consumer>
                         <Navbar bg="light" expand="lg">
                             <Navbar.Brand as={NavLink} to='/'>Library</Navbar.Brand>
                             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
                                 <Nav.Link as={NavLink} to='/buy'>Buy</Nav.Link>
-                                <Nav.Link as={NavLink} to='/product'>Product</Nav.Link>                
+                                <Nav.Link as={NavLink} to='/product'>Product</Nav.Link>
+                                <CartContext.Consumer>
+                                    {({cartItems})=>(
+                                        <Nav.Link as={NavLink} to='/buy'>Cart ({cartItems.length})</Nav.Link>
+                                    )}
+                                </CartContext.Consumer>                            
                             </Nav>
                             </Navbar.Collapse>
                         </Navbar>

@@ -10,7 +10,7 @@ import {
 
 } from "react-router-dom";
 
-import NumberProvider from './../../context_api/NumberProvider';
+import {CartContext} from './../../context_api/Cart';
 import Style from './style.js';
 import Header from './../../layout/Header/Header.component';
 
@@ -38,7 +38,6 @@ class Buy extends Component{
         const {product} =this.state;
         return(
             <Style>
-                <NumberProvider>
                 <div className='Buy'>
                     <Header/>
 
@@ -49,13 +48,16 @@ class Buy extends Component{
                                 <Card.Body>
                                     <Card.Title>{product.name}</Card.Title>
                                     <Card.Text>{product.information}</Card.Text>
-                                    <Button variant="primary">Buy</Button>
+                                    <CartContext.Consumer>
+                                        {({setCart})=>(
+                                            <Button onClick={()=>setCart(product)} variant="primary">Buy</Button>
+                                        )}
+                                    </CartContext.Consumer>
                                 </Card.Body>
                             </Card>
                         ))
                     }
                 </div>
-                </NumberProvider>
             </Style>
         )
     }
