@@ -54,13 +54,13 @@ const Style = styled.section`
     }
     .line-or div{
         position: absolute;
-        left: 40%;
+        left: 50%;
         background:#fff;
         background: -webkit-gradient(linear,left top,right top,from(#bd3381),to(#ee583f));
         background: -webkit-linear-gradient(left,#bd3381,#ee583f);
         background: linear-gradient(to right,#bd3381,#ee583f);
         padding: 0 1rem;
-        top: 1vw;
+        top: 1%;
     }
 
     /* SignIn with */
