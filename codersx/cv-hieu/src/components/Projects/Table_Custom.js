@@ -21,19 +21,27 @@ function Table_Custom() {
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>2</td>
                         <td>Amazon clone</td>
                         <td>
                             <a href='https://clone-91ccb.web.app/'>https://clone-91ccb.web.app/</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>3</td>
                         <td>Messeger clone</td>
                         <td>
                             <a href='https://messeger-clone.web.app/'>https://messeger-clone.web.app/</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Typing speed</td>
+                        <td>
+                            <a href='https://typing-speed-c1550.web.app'>https://typing-speed-c1550.web.app</a>
+                        </td>
+                    </tr>
+                    
                 </tbody>
             </Table>
         </Container>

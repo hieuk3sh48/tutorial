@@ -26,4 +26,6 @@
 
 .app__headerImage{
   object-fit: contain;
+  width: 10vw;
+  height: 10vh;
 }

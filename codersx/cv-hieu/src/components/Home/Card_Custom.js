@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
-import avatar from '../assets/img/IMG_20200730_135156_169.jpg'
+import avatar from '../../assets/img/IMG_20200730_135156_169.jpg'
 
 function Card_Custom() {
     return (
@@ -80,6 +80,8 @@ function Card_Custom() {
                 <p>-- FIREBASE</p>
                 <p>-- MATERIAL-UI</p>
                 <a href='https://github.com/hieuk3sh48/tutorial'>-- Github</a>
+                <a href='https://glitch.com/@hieuk3sh48'>-- Glitch</a>
+                
               </div>
             </div>
           </div>

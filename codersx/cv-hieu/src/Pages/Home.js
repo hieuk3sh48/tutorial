@@ -1,14 +1,14 @@
 import React from 'react'
+import Card_Custom from '../components/Home/Card_Custom'
 import NavBar_Custom from '../components/.Layouts/NavBar_Custom'
-import Table_Custom from '../components/Projects/Table_Custom'
 
-function Projects() {
+function Home() {
     return (
         <div>
             <NavBar_Custom/>
-            <Table_Custom/>
+            <Card_Custom/>
         </div>
     )
 }
 
-export default Projects
+export default Home

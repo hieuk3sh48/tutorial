@@ -65,7 +65,7 @@ function App() {
 
       setPosts(snapshot.docs.map(doc=>({id:doc.id, data:doc.data()})))
     })
-  }, [])
+  }, [user,username])
 
   const signUp=(event)=>{
     event.preventDefault();
@@ -107,7 +107,7 @@ function App() {
               <img 
                 className='app__headerImage'
                 alt='logo'
-                src='https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png'
+                src='https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/320/1x/cbeebies/pets_topic_text_f.png'
               />
             </center>
               <Input
@@ -142,7 +142,7 @@ function App() {
               <img 
                 className='app__headerImage'
                 alt='logo'
-                src='https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png'
+                src='https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/320/1x/cbeebies/pets_topic_text_f.png'
               />
             </center>
               <Input
@@ -167,7 +167,7 @@ function App() {
           <img 
             className='app__headerImage'
             alt='logo'
-            src='https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png'
+            src='https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/320/1x/cbeebies/pets_topic_text_f.png'
           />
 
           {
@@ -193,7 +193,7 @@ function App() {
         </div>
         <div className='right'>
           <InstagramEmbed
-            url='https://www.instagram.com/p/CB30zCNpSQm/'
+            url='https://www.instagram.com/p/CCWJjlJhdEy/'
             maxWidth={320}
             hideCaption={false}
             containerTagName='div'
