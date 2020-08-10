@@ -20,7 +20,7 @@ React
             StateContext    // createContext()
             StateProvider   // <StateContext.Provider>
             useStateValue   // useContext(StateContext)
-    Redux        
+    Reducer        
         reducer.js       
 
 Material-ui
