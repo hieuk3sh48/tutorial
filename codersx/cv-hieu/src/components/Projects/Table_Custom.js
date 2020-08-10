@@ -41,6 +41,13 @@ function Table_Custom() {
                             <a href='https://typing-speed-c1550.web.app'>https://typing-speed-c1550.web.app</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Spotify clone</td>
+                        <td>
+                            <a href='https://spotify-clone-355bd.web.app/'>https://spotify-clone-355bd.web.app/</a>
+                        </td>
+                    </tr>
                     
                 </tbody>
             </Table>
