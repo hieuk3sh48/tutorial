@@ -1,0 +1,12 @@
+ 
+ heroku
+      heroku login
+      git init
+      heroku git:remote -a react-chat-application-20
+      .gitignore
+         /node_modules
+      git add .
+      git commit -m 'first commit'
+      git push heroku master
+      Procfile
+      https://react-chat-application-20.herokuapp.com/
