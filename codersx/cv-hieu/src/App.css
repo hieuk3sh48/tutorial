@@ -68,6 +68,10 @@
     font-weight: normal;
 }
 
+.vitri {
+    margin: 0 1vw;
+}
+
 @media only screen and (max-width:1130px){
     .container {
         display: flex;
