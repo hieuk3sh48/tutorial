@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
-import avatar from '../../assets/img/IMG_20200730_135156_169.jpg'
+import avatar from '../../assets/img/IMG_20200820_144351_172.jpg'
 
 function Card_Custom() {
     return (

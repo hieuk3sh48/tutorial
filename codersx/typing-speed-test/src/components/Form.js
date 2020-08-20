@@ -28,13 +28,13 @@ function Form() {
     const [countWordCorrect, setCountWordCorrect] = useState(0);
     const [countWordWrong, setCountWordWrong] = useState(0);
     const [isTimeCount, setIsTimeCount] = useState(false);
-    //const [fishi, setFishi] = useState(false)
+
     let element = array.map((element, index) =>
         <span 
             key={index} 
             className={index === currentWord ? "highlight" : index < currentWord &&
                        arrayTyping.map((typing,indexTyping)=>
-                           //console.log(array[1])
+
                            typing === array[indexTyping] ? ' correct' : ' wrong'
                        )
                 
@@ -46,93 +46,21 @@ function Form() {
 
     useEffect(() => {
        if(isTimeCount){
-
-            let count = 0;
-            let timeWord = time ;
-
-            let timer = setInterval(()=>{
-                count = count + 1;
-                if(count <= 60){
-                    setTime(timeWord - count);
-                    
-                    if(count === 60 || !isTimeCount){
-                        clearInterval(timer);
-                        setIsTimeCount(false);
-                        //setFishi(true)
-                        //bbb();
-                        //alert('Hoàn thành');
-                        //reset();
-                    }
-                }             
-            },100) 
+            let count = 1;
+            let timeWord = time;
+            const timer = window.setInterval(()=>{
+                count++;
+                setTime(timeWord - count);
+                if(count === 60){
+                    clearInterval(timer);
+                }   
+            },100);
+            return () => clearInterval(timer);
        }
+       return undefined;
     }, [isTimeCount])
 
-    /* const bbb = () => {
-
-        //console.log('ddddd')
-        console.log(arrayTyping)
-        element = array.map((element, indexElement) =>
-            <span 
-                key={indexElement} 
-                className={
-                    arrayTyping.map((typing,indexTyping)=>{
-
-                        if(element === typing) return 'correct'
-                        if(element !== typing) return 'wrong'
-                    })
-                }
-            >
-                {element + " "}
-            </span>
-        );
-
-    } */
-
-   /*  useEffect(() => {
-
-        if(fishi){
-            console.log('ddddd')
-            element = array.map((element, indexElement) =>
-                <span 
-                    key={indexElement} 
-                    className={
-                        arrayTyping.map((typing,indexTyping)=>{
-
-                            if(element === typing) return 'correct'
-                            if(element !== typing) return 'wrong'
-                        })
-                    }
-                >
-                    {" "}
-                </span>
-            );
-        }
-    }, [fishi]) */
-
-  /*   const handleStartTyping = () => {
-        console.log(isTimeCount)
-        let count = 0;
-        let timeWord = time ;
-
-        let timer = setInterval(()=>{
-            count = count + 1;
-            if(count <= 60){
-                setTime(timeWord - count);
-                
-                if(count === 60){
-                    handleClearInterval(timer)
-                    setIsTimeCount(false);
-                }
-            }             
-        },100) 
-    } */
-
-    /* const handleClearInterval = (timer) => {
-        clearInterval(timer);
-        handleCompare();
-    }
- */
+   
     useEffect(() => {
         
         //console.log(arrayTyping)
@@ -152,31 +80,18 @@ function Form() {
         setCountWordWrong(wrong);
     }, [arrayTyping])
 
-   /*  const handleCompare = () => {
-        console.log(arrayTyping)
-        arrayTyping.map((item,index)=>{
-            //console.log(item, array[index])
-            if(item === array[index]){
-                setCountWordCorrect(countWordCorrect + 1);
-            }
-        })
-
-        setCountWordWrong(arrayTyping.length - countWordCorrect);
-    } */
 
     const handleChange = (event) => {
         event.preventDefault();
 
         let txtText = event.target.value;
         let results = txtText.split(/\s+/).join(' ');
-       /*  let valueTimeCount ;
-        if(txtText.length === 1) valueTimeCount = true */
 
         setArrayTyping(results.split(" "))
         setCurrentWord(results.split(" ").length - 1)
-        setIsTimeCount((txtText.length === 1) && true);
+        setIsTimeCount(txtText.length >= 1 && true);
 
-        //if(valueTimeCount) handleStartTyping();
+       
     }
 
     const resetButton = (event) => {

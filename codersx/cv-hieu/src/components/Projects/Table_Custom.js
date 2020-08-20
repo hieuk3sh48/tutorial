@@ -48,7 +48,13 @@ function Table_Custom() {
                             <a href='https://spotify-clone-355bd.web.app/'>https://spotify-clone-355bd.web.app/</a>
                         </td>
                     </tr>
-                    
+                    <tr>
+                        <td>6</td>
+                        <td>Realtime chat</td>
+                        <td>
+                            <a href='https://realtime-chat-4b660.web.app/'>https://realtime-chat-4b660.web.app/</a>
+                        </td>
+                    </tr>
                 </tbody>
             </Table>
         </Container>
