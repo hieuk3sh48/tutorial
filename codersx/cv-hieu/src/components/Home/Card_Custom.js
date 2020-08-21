@@ -9,7 +9,7 @@ function Card_Custom() {
             <div className='avatar'>
               <img src={avatar} alt='avatar'/>
             </div>
-            <p className='vitri'>Junior Frontend Developer</p>
+            <p className='vitri'>Fresher Frontend Dev</p>
             <Card className='information'>
               <Card.Body>
                 <Card.Title>Name:</Card.Title>
