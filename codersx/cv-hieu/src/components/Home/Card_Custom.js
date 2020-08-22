@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
-import avatar from '../../assets/img/IMG_20200820_144351_172.jpg'
+import avatar from '../../assets/img/C_Vdocx.10115.jpg'
 
 function Card_Custom() {
     return (
@@ -34,6 +34,10 @@ function Card_Custom() {
               <Card.Body>
                 <Card.Title>Gender:</Card.Title>
                 <Card.Text>Male</Card.Text>
+              </Card.Body>
+              <Card.Body>
+                <Card.Title>Education:</Card.Title>
+                <Card.Text>SaoDo university</Card.Text>
               </Card.Body>
             </Card>
           </div>
